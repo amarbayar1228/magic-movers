@@ -203,7 +203,7 @@ const BaseLayout = () => {
                       color: "#FF4040", 
                       textShadow: "rgba(0, 0, 0, 0.5) 1px 3px 3px" 
                     }}>
-                      Season's hot rates!
+                      Season&apos;s hot rates!
                     </div>
 
             <div className={css.servicesbox}>
@@ -223,7 +223,7 @@ const BaseLayout = () => {
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
-                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What's included:</div>
+                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What&apos;s included:</div>
 
                 <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
                   <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
@@ -296,7 +296,7 @@ const BaseLayout = () => {
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
-                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What's included:</div>
+                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What&apos;s included:</div>
 
                 <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
                   <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
@@ -369,7 +369,7 @@ const BaseLayout = () => {
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
-                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What's included:</div>
+                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What&apos;s included:</div>
 
                 <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
                   <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
@@ -428,7 +428,7 @@ const BaseLayout = () => {
               </div>
               <div className={css.boxs}>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} />
+                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} alt="Movers"/>
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
@@ -442,7 +442,7 @@ const BaseLayout = () => {
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
-                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What's included:</div>
+                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What&apos;s included:</div>
 
                 <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
                   <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
