@@ -20,12 +20,15 @@
     width: 100%;
     padding: 10px 0;
   }
-  
-  .ourServices, .aboutUs, .reviews, .contact {
+  .ourServices{
+    height: 900px;
+    padding: 20px;
+  }
+   .aboutUs, .reviews, .contact {
     height: 600px;
     padding: 20px;
   }
-  .services {
+  .services { 
     height: 720px; 
     padding: 20px -1px 20px 20px;
     width: 100%;
@@ -37,7 +40,7 @@
   
   
   .services { background-color: rgba(25, 62, 61, 0.9); } 
-  .ourServices { background-color: lightblue; }
+  .ourServices { background-color: #fff; }
   .aboutUs { background-color: lightgray; }
   .reviews { background-color: lightyellow; }
   .contact { background-color: lightpink; }
@@ -49,9 +52,9 @@
   }
   .mainCss{ 
     display: flex;
-    width: 1536px;
+    width: 1436px;
     height: 100%;
-    margin: 0px auto;
+    margin: 0px auto; 
     justify-content: space-between;
     align-items: center;
   }
@@ -68,6 +71,7 @@
   .Icons{
     display: flex;
     gap: 10px;
+    cursor: pointer;
     align-items: center;
   }
   .Imagecss{
@@ -122,6 +126,30 @@
     padding: 5px 0px;
     font-weight: 600; 
   }
+  .ourservicesCss{ 
+    margin: 20px auto;
+    width: 1150px; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ourserviceTitle{
+    text-align: center;
+    font-weight: 500;
+    font-size: 56px;  
+    position: relative;
+    display: inline-block;
+  }
+  .ourserviceTitle:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px; /* Custom width */
+    height: 5px; /* Custom height */
+    background-color: black; /* Border color */
+    transform: translateX(-50%);
+  }
   .submitCss{
     width: 200px;
     padding: 15px 40px;
@@ -138,17 +166,107 @@
   .submitCss:hover{ 
     background: rgba(56, 163, 139, 1);
   }
-  @media only screen and (max-width: 1536px) {
+  .servicesbox{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  .boxs{
+    margin-top: 40px;  
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 4px 1px #ccc;
+  } 
+  .BookNow{
+    background: #FFC800;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid #FFC800;
+  }
+  .BookNow:hover{
+    border: 1px solid #000;
+  }
+  .imageFlex{ 
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 1536px) { 
     .flex{
       width: 90%;
     }
+    .mainCss{  
+      width: 70%; 
+    }
+    .ourservicesCss{
+      width: 70%;
+    }
+    .servicesbox{
+      flex-direction: column;   
+    }
+    .ourServices{
+      height: 100%;
+    }
   }
   @media only screen and (max-width: 768px) {
-  
+    .ourserviceTitle{
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .ourserviceTitle:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 60px; /* Custom width */
+      height: 2px; /* Custom height */
+      background-color: black; /* Border color */
+      transform: translateX(-50%);
+    }
+    .ourservicesCss{
+      margin: inherit;
+      width: 100%;
+    }
+    .submitCss{
+      width: 155px;
+    }
+    .mainLay1{
+      padding-bottom: 40px;
+    }
+    .mainCont{
+      flex-direction: column;
+    }
+    .mainTitleBig{
+      font-size: 25px;
+    }
+    .radioGroupCss{
+      display: flex;
+    flex-wrap: wrap;
+    }
+    .getTitle {
+      font-size: 19px;
+    }
+    .form{
+      padding: 20px;
+    }
+    .mainCss{
+      width: 85%;
+    }
+    .pickLo{
+      flex-direction: column;
+    }
+    .services{
+      height: 1000px;
+    }
     .phone{
       display: flex;
       flex-direction: column-reverse;
       gap: 5px;
+      cursor: pointer;
       align-items: normal;
     }
     .Imagecss{
@@ -162,6 +280,7 @@
       width: 100%;
       justify-content: space-between;
       align-items: center;
+      cursor: pointer;
     }
     .flex{
       display: flex;

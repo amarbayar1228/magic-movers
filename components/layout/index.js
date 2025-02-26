@@ -1,4 +1,4 @@
-import { Button, Drawer, Input, Radio, Spin } from "antd";
+import { Button, Drawer, FloatButton, Input, Radio, Spin } from "antd";
 import { useState, useRef, useEffect } from "react";
 import css from "./style.module.css";
 import { MailOutlined, PhoneOutlined, MenuOutlined } from '@ant-design/icons';
@@ -63,10 +63,11 @@ const BaseLayout = () => {
 
   return (
     <div>
+      <FloatButton.BackTop />
       <div className={css.App}>
         <div ref={heroRef} className={css.hero}> {/* Add ref here */}
           <div className={css.flex}>
-            <div className={css.imageFlex}>
+            <div className={css.imageFlex} onClick={() => scrollToSection(services)} >
               <Image src="/img/logo.jpg" width={100} height={100} className={css.Imagecss} />
               {!matches500 && <div><MenuOutlined style={{fontSize: "38px"}} onClick={showDrawer} /></div>}
             </div>
@@ -83,10 +84,11 @@ const BaseLayout = () => {
 
             {(matches1024 || !matches768) && 
               <div className={css.phone}>
-                <div className={css.Icons}>
-                  <MailOutlined style={{fontSize: "28px"}}/> magicmoversla@gmail.com
+                <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
+                  <MailOutlined style={{fontSize: "28px"}}/> 
+                  magicmoversla@gmail.com
                 </div>
-                <div className={css.Icons}>
+                <div className={css.Icons} onClick={() => window.location.href = "tel:+2137158265"}>
                   <PhoneOutlined rotate={90} style={{fontSize: "28px"}}/> (213) 715-8265
                 </div>
               </div>
@@ -125,6 +127,7 @@ const BaseLayout = () => {
                         <div className={css.groupRadio}> 
                             <Radio.Group
                                 // style={{ display: 'flex', flexDirection: 'column' }}
+                                className={css.radioGroupCss}
                                 name="radiogroup"
                                 defaultValue={1}
                                 size="large"
@@ -187,7 +190,316 @@ const BaseLayout = () => {
                 </div>
             </div>
         </div>
-        <div ref={ourServices} className={css.ourServices}><h3>Our Services</h3></div>
+        <div ref={ourServices} className={css.ourServices}>
+          <div className={css.ourservicesCss}>
+            <div className={css.ourserviceTitle}>Our Service</div>
+              <div style={{ 
+                      marginTop: "10px",
+                      fontSize: "20px",
+                      textAlign: "center", 
+                      color: "#FF4040", 
+                      textShadow: "rgba(0, 0, 0, 0.5) 1px 3px 3px" 
+                    }}>
+                      Season's hot rates!
+                    </div>
+
+            <div className={css.servicesbox}>
+              <div className={css.boxs}>
+                <div style={{display: "flex", justifyContent: "center"}}>
+                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} />
+                </div>
+                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
+                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$109
+                  <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
+                </div>
+                <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
+                Cash/Zelle/Card/Venmo
+                </div>
+                <div style={{background: "#FFC800", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                  Get a free Quote
+                </div>
+                <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
+                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What's included:</div>
+
+                <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
+                  <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div  style={{fontWeight: "600"}}>Use of Blankets</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Wardrobe Boxes</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Disassembly / Reassembly</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Tape & Protective Padding</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Mattress Covers</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Tools & Straps</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Dollies & Equipment</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Tax & Basic Insurance</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Appliances</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Packing / Unpacking</div>
+                </div> 
+
+
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#ED1566", marginTop: "26px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES:</div>
+                </div> 
+
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Fuel $80 one time flat fee</div>
+                </div> 
+                <div className={css.BookNow}>
+                  Book Now
+                </div>
+              </div>
+              <div className={css.boxs}>
+                <div style={{display: "flex", justifyContent: "center"}}>
+                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} />
+                </div>
+                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
+                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$180
+                  <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
+                </div>
+                <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
+                Cash/Zelle/Card/Venmo
+                </div>
+                <div style={{background: "#FFC800", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                  Get a free Quote
+                </div>
+                <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
+                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What's included:</div>
+
+                <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
+                  <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div  style={{fontWeight: "600"}}>Use of Blankets</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Wardrobe Boxes</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Disassembly / Reassembly</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Tape & Protective Padding</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Mattress Covers</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Tools & Straps</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Dollies & Equipment</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Tax & Basic Insurance</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Appliances</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Packing / Unpacking</div>
+                </div> 
+
+
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#ED1566", marginTop: "26px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES:</div>
+                </div> 
+
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Fuel $80 one time flat fee</div>
+                </div> 
+                <div className={css.BookNow}>
+                  Book Now
+                </div>
+              </div>
+              <div className={css.boxs}>
+                <div style={{display: "flex", justifyContent: "center"}}>
+                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} />
+                </div>
+                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
+                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$149
+                  <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
+                </div>
+                <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
+                Cash/Zelle/Card/Venmo
+                </div>
+                <div style={{background: "#FFC800", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                  Get a free Quote
+                </div>
+                <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
+                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What's included:</div>
+
+                <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
+                  <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div  style={{fontWeight: "600"}}>Use of Blankets</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Wardrobe Boxes</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Disassembly / Reassembly</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Tape & Protective Padding</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Mattress Covers</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Tools & Straps</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Dollies & Equipment</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Tax & Basic Insurance</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Appliances</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Packing / Unpacking</div>
+                </div> 
+
+
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#ED1566", marginTop: "26px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES:</div>
+                </div> 
+
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Fuel $80 one time flat fee</div>
+                </div> 
+                <div className={css.BookNow}>
+                  Book Now
+                </div>
+              </div>
+              <div className={css.boxs}>
+                <div style={{display: "flex", justifyContent: "center"}}>
+                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} />
+                </div>
+                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
+                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$220
+                  <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
+                </div>
+                <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
+                Cash/Zelle/Card/Venmo
+                </div>
+                <div style={{background: "#FFC800", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                  Get a free Quote
+                </div>
+                <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
+                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What's included:</div>
+
+                <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
+                  <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div  style={{fontWeight: "600"}}>Use of Blankets</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Wardrobe Boxes</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Disassembly / Reassembly</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Tape & Protective Padding</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Mattress Covers</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Tools & Straps</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Use of Dollies & Equipment</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Tax & Basic Insurance</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Appliances</div>
+                </div> 
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Packing / Unpacking</div>
+                </div> 
+
+
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#ED1566", marginTop: "26px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES:</div>
+                </div> 
+
+                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
+                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
+                  <div style={{fontWeight: "600"}}>Fuel $80 one time flat fee</div>
+                </div> 
+                <div className={css.BookNow}>
+                  Book Now
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
         <div ref={aboutUs} className={css.aboutUs}><h3>About Us</h3></div>
         <div ref={reviews} className={css.reviews}><h3>Reviews</h3></div>
         <div ref={contact} className={css.contact}><h3>Contact</h3></div>
@@ -196,4 +508,4 @@ const BaseLayout = () => {
   );
 };
 
-export default BaseLayout;
+export default BaseLayout; 
