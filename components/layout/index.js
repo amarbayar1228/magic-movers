@@ -58,7 +58,7 @@ const BaseLayout = () => {
     drop_off_location: "drop_off_location", // Your mail
     moving_date: "message tailbar",
     moving_size: "moving_size",
-    form_name: "amarbayarbatbayar2@gmail.com" // tuhai n hvniih
+    form_name: "magicmoversla@gmail.com" // tuhai n hvniih
   });
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -127,7 +127,7 @@ const onChange = (date, dateString) => {
                 pick_up_location: "", // Your mail
                 drop_off_location: "", // Your mail
                 moving_date: "",
-                form_name: "", // tuhai n hvniih
+                form_name: "magicmoversla@gmail.com", // tuhai n hvniih
                 moving_size: "",
                });
                message.success("sent successfully")
