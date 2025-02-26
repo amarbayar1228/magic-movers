@@ -1,0 +1,90 @@
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+float: left;
+}
+#components-form-demo-normal-login .login-form-button {
+width: 100%;
+}
+
+body{
+  margin: 0; 
+  font-family: "Montserrat", sans-serif;  
+}
+div:where(.css-dev-only-do-not-override-htwhyh).ant-typography, :where(.css-dev-only-do-not-override-htwhyh).ant-typography p {
+   margin-bottom: 0px;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.woff2") format("woff2"),
+       url("/fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Bold.woff2") format("woff2"),
+       url("/fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(39, 39, 39);
+}
+/* 
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(39, 39, 39);
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+} */

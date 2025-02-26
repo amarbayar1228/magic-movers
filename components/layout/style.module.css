@@ -1,0 +1,203 @@
+ 
+  
+.stickyHeader {
+  background-color: rgba(25, 62, 61, 0.9); /* Slightly transparent */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+  .flex{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 1536px;
+    color: #fff;
+    margin: 0px auto;
+  }
+  .hero {
+    position: sticky;
+    top: 0;
+    background-color: rgb(25 62 61);
+    z-index: 10;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .ourServices, .aboutUs, .reviews, .contact {
+    height: 600px;
+    padding: 20px;
+  }
+  .services {
+    height: 720px; 
+    padding: 20px -1px 20px 20px;
+    width: 100%;
+    background-image: url('/img/back2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  
+  .services { background-color: rgba(25, 62, 61, 0.9); } 
+  .ourServices { background-color: lightblue; }
+  .aboutUs { background-color: lightgray; }
+  .reviews { background-color: lightyellow; }
+  .contact { background-color: lightpink; }
+  
+  .link {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .mainCss{ 
+    display: flex;
+    width: 1536px;
+    height: 100%;
+    margin: 0px auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mainCont{ 
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+  }
+  .phone{
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+  }
+  .Icons{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .Imagecss{
+    width: 100px;
+    height: 100px;
+  }
+  .mainTitleBig{
+    
+    font-weight: 600;
+    font-size: 46px;
+
+  }
+  .mainLay1{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  .mainTitleSmall{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .form{
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  .getTitle{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .getTitleSmall{ 
+    padding-top: 5px;
+    display: flex
+;
+    font-size: 16px;
+    gap: 4px;
+    font-weight: 600;
+    align-items: center;
+  }
+  .groupRadio{
+    padding: 10px 0px;
+  }
+  .radioTitle{
+    font-size: 16px;
+  }
+  .pickLo{ 
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    font-weight: 600; 
+  }
+  .submitCss{
+    width: 200px;
+    padding: 15px 40px;
+    border-radius: 15px;
+    display: flex;
+    background: rgba(25, 62, 61, 0.9);
+    margin: 0px auto;
+    justify-content: center; 
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+  }
+  .submitCss:hover{ 
+    background: rgba(56, 163, 139, 1);
+  }
+  @media only screen and (max-width: 1536px) {
+    .flex{
+      width: 90%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+  
+    .phone{
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 5px;
+      align-items: normal;
+    }
+    .Imagecss{
+      width: 50px;
+      height: 50px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .imageFlex{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .flex{
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+      padding-bottom: 15px;
+    } 
+    .Imagecss{
+      width: 30px;
+      height: 30px;
+    }
+    .hero{
+      position: relative;
+    }
+  }
+  /* scroll to top button */
+  /* .top-btn-position {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+  }
+  
+  .top-btn-style {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .top-btn-style:hover {
+    animation: none;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+   */

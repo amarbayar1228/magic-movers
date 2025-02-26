@@ -1,0 +1,14 @@
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 81vh;
+}
+.FromCss{ 
+    border: 1px solid #ccc;
+    padding: 28px;
+    width: 100%;
+    max-width: 800px;
+    margin: 11px;
+    border-radius: 10px;
+ }
