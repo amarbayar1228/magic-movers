@@ -14,9 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BaseLayout pageName="home">
-        <div style={{marginTop: "50px"}}>
-          <Image src="/img/comingSoon.jpg" width={400} height={200}/>
-        </div>
+         
       </BaseLayout>
     </>
   )

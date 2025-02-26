@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import css from "./style.module.css";
 import { MailOutlined, PhoneOutlined, MenuOutlined } from '@ant-design/icons';
 import Image from "next/image";
+import Zurag from "../zurag";
 
 const BaseLayout = () => {
   const services = useRef(null);
@@ -68,7 +69,7 @@ const BaseLayout = () => {
         <div ref={heroRef} className={css.hero}> {/* Add ref here */}
           <div className={css.flex}>
             <div className={css.imageFlex} onClick={() => scrollToSection(services)} >
-              <Image src="/img/logo.jpg" width={100} height={100} className={css.Imagecss} />
+              <Image alt="Company Logo" src="/img/logo.jpg" width={100} height={100} className={css.Imagecss} />
               {!matches500 && <div><MenuOutlined style={{fontSize: "38px"}} onClick={showDrawer} /></div>}
             </div>
 
@@ -118,7 +119,9 @@ const BaseLayout = () => {
             <div className={css.mainCss}>
                 <div className={css.mainCont}>
                     <div className={css.mainLay1}>
-                        <div className={css.mainTitleBig}>Magic Movers LLC - <br/> Relocate with  confidence! </div>
+                        <div className={css.mainTitleBig}>
+                        Magic Movers LLC - Relocate with confidence!
+                        </div>
                         <div className={css.mainTitleSmall}>Full Service In-State Movers</div>
                     </div>
                     <div className={css.form}>
@@ -206,7 +209,7 @@ const BaseLayout = () => {
             <div className={css.servicesbox}>
               <div className={css.boxs}>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} />
+                  <Image src="/img/muv3.avif"  alt="Company Logo" width={100} height={48} className={css.muv3} />
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
@@ -279,7 +282,7 @@ const BaseLayout = () => {
               </div>
               <div className={css.boxs}>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} />
+                  <Image src="/img/muv3.avif" alt="Company Logo" width={100} height={48} className={css.muv3} />
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
@@ -352,7 +355,7 @@ const BaseLayout = () => {
               </div>
               <div className={css.boxs}>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} />
+                  <Image src="/img/muv3.avif" alt="Company Logo" width={100} height={48} className={css.muv3} />
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
@@ -500,7 +503,11 @@ const BaseLayout = () => {
             </div>
           </div>
         </div>
-        <div ref={aboutUs} className={css.aboutUs}><h3>About Us</h3></div>
+        <div ref={aboutUs} className={css.aboutUs}> 
+          <div>
+            <Zurag />
+          </div>
+        </div>
         <div ref={reviews} className={css.reviews}><h3>Reviews</h3></div>
         <div ref={contact} className={css.contact}><h3>Contact</h3></div>
       </div>
