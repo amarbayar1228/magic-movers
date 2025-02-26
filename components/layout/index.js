@@ -50,14 +50,14 @@ const BaseLayout = () => {
   const [loading, setLoading] = useState(false);
 
   const [mailData, setMailData] = useState({
-    to_name: "to_name", // your name
-    from_name: "amraatest@gmail.com", // Your mail
-    phone_number: "phone_number", // Your mail
+    to_name: "", // your name
+    from_name: "", // Your mail
+    phone_number: "", // Your mail
     message: "asd",
-    pick_up_location: "pick_up_location", // Your mail
-    drop_off_location: "drop_off_location", // Your mail
-    moving_date: "message tailbar",
-    moving_size: "moving_size",
+    pick_up_location: "", // Your mail
+    drop_off_location: "", // Your mail
+    moving_date: "",
+    moving_size: "",
     form_name: "magicmoversla@gmail.com" // tuhai n hvniih
   });
   useEffect(() => {
