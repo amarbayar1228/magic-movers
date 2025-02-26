@@ -1,10 +1,34 @@
-import { Button, Drawer, FloatButton, Input, Radio, Spin } from "antd";
+import { Button, Collapse, Drawer, FloatButton, Input, Radio, Spin, theme } from "antd";
 import { useState, useRef, useEffect } from "react";
 import css from "./style.module.css";
-import { MailOutlined, PhoneOutlined, MenuOutlined } from '@ant-design/icons';
+import { EnvironmentOutlined, MailOutlined, ClockCircleOutlined, PhoneOutlined, MenuOutlined, CaretRightOutlined  } from '@ant-design/icons';
 import Image from "next/image";
 import Zurag from "../zurag";
-
+const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
+const getItems = (panelStyle) => [
+  {
+    key: '1',
+    label: 'This is panel header 1',
+    children: <p>{text}</p>,
+    style: panelStyle,
+  },
+  {
+    key: '2',
+    label: 'This is panel header 2',
+    children: <p>{text}</p>,
+    style: panelStyle,
+  },
+  {
+    key: '3',
+    label: 'This is panel header 3',
+    children: <p>{text}</p>,
+    style: panelStyle,
+  },
+];
 const BaseLayout = () => {
   const services = useRef(null);
   const services2 = useRef(null);
@@ -35,6 +59,10 @@ const BaseLayout = () => {
       window.matchMedia("(min-width: 500px)").addEventListener('change', e => setMatches5(e.matches));
     }
   }, []);
+  const { token } = theme.useToken();
+  const panelStyle = { 
+    background: token.colorFillAlter,  
+  };
    
   // ScrollToSection function
   const scrollToSection = (elementRef) => {
@@ -149,7 +177,7 @@ const BaseLayout = () => {
                                 },
                                 {
                                     value: 4,
-                                    label: <span className={css.radioTitle}>3+ Bedroom</span>,
+                                    label: <span className={css.radioTitle}>123</span>,
                                 },
                                 ]}
                             />
@@ -504,12 +532,59 @@ const BaseLayout = () => {
           </div>
         </div>
         <div ref={aboutUs} className={css.aboutUs}> 
-          <div>
+          <div className={css.aboutUsDetail}>
             <Zurag />
+            <div className={css.aboutdetail}>
+              <div className={css.AboutTitle}>About us</div>
+              <div style={{marginTop: "40px"}}className={css.AboutDesc}>Customer satisfaction is at the heart of our mission. We believe in open communication, transparent pricing, and the personalized attention that every client deserves. Your peace of mind is our top priority, and we go above and beyond to exceed your expectations.</div>
+              <div style={{marginTop: "20px"}} className={css.AboutDesc}>Our office and fleet are conveniently located in the heart of Brentwood, Los Angeles CA - 90049. You can rest assured we will always be on time, anywhere, anytime.</div>
+              <div  style={{marginTop: "40px"}} className={css.AboutDesc}>We uphold our commitments, recognizing the significance of our clients trust, especially during the emotionally charged process of transitioning from one residence to another.</div>
+              <div style={{marginTop: "20px"}} className={css.AboutDesc}>Our reputation has been built on referrals and loyal customers, and we are committed to maintaining this tradition. </div>
+            </div>
+          </div> 
+            <div className={css.qacss}>
+              <Collapse
+                bordered={false} 
+                    defaultActiveKey={['1']}
+                    expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
+                    style={{
+                      background: token.colorBgContainer,
+                    }}
+                    items={getItems(panelStyle)}
+                /> 
           </div>
         </div>
         <div ref={reviews} className={css.reviews}><h3>Reviews</h3></div>
-        <div ref={contact} className={css.contact}><h3>Contact</h3></div>
+        <div ref={contact} className={css.contact}>
+              <div className={css.contact2}>
+                <div className={css.FooterLogo}>
+                  <div>
+                  <Image alt="Company Logo" src="/img/logo.jpg" width={200} height={150} className={css.imgFooter}/>
+                  </div>
+                  <div>Professional Moving Services at Lowest Rates!</div>
+                </div>
+                <div className={css.footerLayout2}>
+                  <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
+                    <EnvironmentOutlined style={{fontSize: "28px"}}/> 
+                    11706 Dorothy St. Los Angeles, CA 90049
+                  </div>
+                  <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
+                    <MailOutlined style={{fontSize: "28px"}}/> 
+                    magicmoversla@gmail.com
+                  </div>
+                  <div className={css.Icons} onClick={() => window.location.href = "tel:+2137158265"}>
+                    <PhoneOutlined rotate={90} style={{fontSize: "28px"}}/> (213) 715-8265
+                  </div>
+                  <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
+                    <ClockCircleOutlined style={{fontSize: "28px"}}/> 
+                    Mon - Sun 8:00 AM - 8:00 PM
+                  </div>
+                </div>
+                <div style={{display: "flex", alignItems: "center", fontSize: "20px"}}>License - CAL-T 192594</div>
+
+              </div>
+        </div>
+        <div style={{width: "100%", background: "#fff", textAlign: "center", fontSize: "14px", padding: "10px 0px"}}>©2025 by Magic Movers LLC.</div>
       </div>
     </div>
   );

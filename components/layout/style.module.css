@@ -24,10 +24,15 @@
     height: 900px;
     padding: 20px;
   }
-   .aboutUs, .reviews, .contact {
-    height: 600px;
+  .contact{
+    height: 300px;
     padding: 20px;
   }
+   .aboutUs, .reviews {
+    height: 1000px;
+    padding: 20px;
+  }
+
   .services { 
     height: 720px; 
     padding: 20px -1px 20px 20px;
@@ -37,13 +42,17 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-  
+
+  .qacss{
+    width: 1150px;
+    margin: 50px auto;
+  }
   
   .services { background-color: rgba(25, 62, 61, 0.9); } 
   .ourServices { background-color: #fff; }
-  .aboutUs { background-color: lightgray; }
+  .aboutUs { background-color: #fff; }
   .reviews { background-color: lightyellow; }
-  .contact { background-color: lightpink; }
+  .contact { background-color: rgba(25, 62, 61, 0.9); }
   
   .link {
     cursor: pointer;
@@ -125,6 +134,7 @@
     justify-content: space-between;
     padding: 5px 0px;
     font-weight: 600; 
+    gap: 10px;
   }
   .ourservicesCss{ 
     margin: 20px auto;
@@ -195,7 +205,62 @@
   .imageFlex{ 
     cursor: pointer;
   }
+  .contact2{
+    display: flex;
+    padding: 0px 200px;
+    justify-content: space-between;
+  }
+  .FooterLogo{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color:#fff;
+  }
+  .imgFooter{
+    width: 350px;
+    height: 20px;
+  }
+  .footerLayout2{ 
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    color: #fff;
+  }
+  .aboutUsDetail{
+    display: flex;
+    margin: 0px auto;
+    width: 1150px;
+    gap: 40px;
+  }
+  .aboutdetail{
+    display: flex; 
+    flex-direction: column;
+  }
+  .AboutTitle{
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+  } 
+ 
+  .AboutDesc{
+    font-size: 18px;
+  }
+  .imgFlex{
+    display: flex;
+    gap: 40px;
+  }
   @media only screen and (max-width: 1536px) { 
+    .qacss{
+      width: 80%;
+    }
+    .aboutUsDetail{
+      width: 100%;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .aboutUs{
+      height: 1635px;
+    }
     .flex{
       width: 90%;
     }
@@ -211,8 +276,22 @@
     .ourServices{
       height: 100%;
     }
+    .contact2{ 
+      padding: 0px 10px;
+    }
   }
   @media only screen and (max-width: 768px) {
+    .qacss{
+      width: 100%;
+    }
+    .contact{
+      height: 600px;
+    }
+    .contact2{
+      gap: 40px;
+      flex-direction: column;
+      padding: 0px 10px;
+    }
     .ourserviceTitle{
       font-size: 32px;
       font-weight: 600;
@@ -274,7 +353,11 @@
       height: 50px;
     }
   }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 500px) { 
+    .imgFlex{
+      flex-direction: column;
+      gap: 20px;
+    }
     .imageFlex{
       display: flex;
       width: 100%;
