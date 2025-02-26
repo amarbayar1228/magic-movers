@@ -120,7 +120,7 @@ const BaseLayout = () => {
                 <div className={css.mainCont}>
                     <div className={css.mainLay1}>
                         <div className={css.mainTitleBig}>
-                        Magic Movers LLC - Relocate with confidence!
+                        {`Magic Movers LLC - Relocate with confidence!`}
                         </div>
                         <div className={css.mainTitleSmall}>Full Service In-State Movers</div>
                     </div>
