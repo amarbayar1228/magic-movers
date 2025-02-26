@@ -12,36 +12,37 @@ const body = {
     password: parseInt(values.password),
     returnSecureToken: true
 }
-axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCkxKA3o1jlKxVN7DM12dNs_L6O5sPoG9w", body).then((res)=>{ 
-    if(res.data.registered === true){ 
-        const expIn =  res.data.expiresIn;
-        const expireDate = new Date(new Date().getTime() + parseInt(expIn) * 1000); 
-        localStorage.setItem("idToken",  res.data.idToken)
-        localStorage.setItem("localId",  res.data.localId) 
-        localStorage.setItem("expireDate", expireDate)
-        localStorage.setItem("refreshToken",  res.data.refreshToken) 
-        refreshToken(expIn * 1000)
 
-        message.success("Success");
-        router.push("/new-words");  
-    }else{ 
-        message.error(res.data.errors[0].message)
-    }
-}).catch((err)=>{
-     message.error(err.code ? err.code : "Error")
-}) 
+// axios.post("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCkxKA3o1jlKxVN7DM12dNs_L6O5sPoG9w", body).then((res)=>{ 
+//     if(res.data.registered === true){ 
+//         const expIn =  res.data.expiresIn;
+//         const expireDate = new Date(new Date().getTime() + parseInt(expIn) * 1000); 
+//         localStorage.setItem("idToken",  res.data.idToken)
+//         localStorage.setItem("localId",  res.data.localId) 
+//         localStorage.setItem("expireDate", expireDate)
+//         localStorage.setItem("refreshToken",  res.data.refreshToken) 
+//         refreshToken(expIn * 1000)
+
+//         message.success("Success");
+//         router.push("/new-words");  
+//     }else{ 
+//         message.error(res.data.errors[0].message)
+//     }
+// }).catch((err)=>{
+//      message.error(err.code ? err.code : "Error")
+// }) 
 };
 
- const refreshToken = async(expIn) =>{ 
-    await setTimeout(()=>{  
-        localStorage.removeItem("localId");
-        localStorage.removeItem("idToken");
-        localStorage.removeItem("expiresIn");
-        localStorage.removeItem("refreshToken");
-        localStorage.removeItem("expireDate");
-        router.push("/");
-    },expIn)
-}
+//  const refreshToken = async(expIn) =>{ 
+//     await setTimeout(()=>{  
+//         localStorage.removeItem("localId");
+//         localStorage.removeItem("idToken");
+//         localStorage.removeItem("expiresIn");
+//         localStorage.removeItem("refreshToken");
+//         localStorage.removeItem("expireDate");
+//         router.push("/");
+//     },expIn)
+// }
 
 return <BaseLayout pageName="login" >
     <div className={css.Container}>
