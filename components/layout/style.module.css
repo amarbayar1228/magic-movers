@@ -25,8 +25,8 @@
     padding: 20px;
   }
   .contact{
-    height: 300px;
-    padding: 20px;
+    height: 250px;
+    padding: 50px 20px;
   }
    .aboutUs, .reviews {
     height: 1000px;
@@ -50,7 +50,7 @@
   
   .services { background-color: rgba(25, 62, 61, 0.9); } 
   .ourServices { background-color: #fff; }
-  .aboutUs { background-color: #fff; }
+  .aboutUs { background-color: rgb(25 62 61 / 2%) }
   .reviews { background-color: lightyellow; }
   .contact { background-color: rgba(25, 62, 61, 0.9); }
   
@@ -189,7 +189,11 @@
     box-shadow: 1px 1px 4px 1px #ccc;
   } 
   .BookNow{
-    background: #FFC800;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+    background: rgba(25, 62, 61, 0.9);
     padding: 10px 20px;
     text-align: center;
     border-radius: 10px;
@@ -197,10 +201,12 @@
     font-size: 18;
     margin-top: 20px;
     cursor: pointer;
-    border: 1px solid #FFC800;
+    border: 1px solid rgba(25, 62, 61, 0.9);
+    color: #fff;
   }
   .BookNow:hover{
     border: 1px solid #000;
+    background-color: rgba(56, 163, 139, 1);
   }
   .imageFlex{ 
     cursor: pointer;
@@ -218,7 +224,7 @@
   }
   .imgFooter{
     width: 350px;
-    height: 20px;
+    height: 20px; 
   }
   .footerLayout2{ 
     display: flex;
@@ -228,23 +234,37 @@
   }
   .aboutUsDetail{
     display: flex;
-    margin: 0px auto;
+    margin: 50px auto;
     width: 1150px;
     gap: 40px;
   }
   .aboutdetail{
     display: flex; 
     flex-direction: column;
+    margin-left: 60px;
   }
   .AboutTitle{
     font-size: 40px;
     font-weight: 500;
     text-transform: uppercase;
+    margin-left: 11px;
   } 
  
   .AboutDesc{
     font-size: 18px;
+    color: rgb(55, 65, 81);
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
   }
+  .ZuragContainer {
+    flex: 1; /* Зураг тал нь мөн адил жигд байх */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
   .imgFlex{
     display: flex;
     gap: 40px;
@@ -254,12 +274,10 @@
       width: 80%;
     }
     .aboutUsDetail{
-      width: 100%;
-      flex-direction: column-reverse;
-      align-items: center;
+      width: 900px;  
     }
     .aboutUs{
-      height: 1635px;
+      height: 897px;
     }
     .flex{
       width: 90%;
@@ -268,11 +286,9 @@
       width: 70%; 
     }
     .ourservicesCss{
-      width: 70%;
-    }
-    .servicesbox{
-      flex-direction: column;   
-    }
+      width: 1000px;
+      margin: 0px auto;
+    } 
     .ourServices{
       height: 100%;
     }
@@ -281,12 +297,29 @@
     }
   }
   @media only screen and (max-width: 768px) {
+    .ourservicesCss{
+      width: 100%;
+    } 
+    .aboutUs{
+      height: 1200px;
+    }
+    .aboutUsDetail{
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+    .AboutTitle{
+      font-size: 30px;
+    }
+    .aboutdetail{
+      margin-left: 0px;
+      padding: 0px 20px;
+    }
+    .servicesbox{
+      flex-direction: column;   
+    }
     .qacss{
       width: 100%;
-    }
-    .contact{
-      height: 600px;
-    }
+    } 
     .contact2{
       gap: 40px;
       flex-direction: column;
@@ -314,6 +347,7 @@
       width: 155px;
     }
     .mainLay1{
+      padding-top: 40px;
       padding-bottom: 40px;
     }
     .mainCont{
@@ -339,7 +373,7 @@
       flex-direction: column;
     }
     .services{
-      height: 1000px;
+      height: 1200px;
     }
     .phone{
       display: flex;

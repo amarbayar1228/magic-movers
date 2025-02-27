@@ -147,7 +147,7 @@ const onChange = (date, dateString) => {
         <div ref={heroRef} className={css.hero}> {/* Add ref here */}
           <div className={css.flex}>
             <div className={css.imageFlex} onClick={() => scrollToSection(services)} >
-              <Image alt="Company Logo" src="/img/logo.jpg" width={100} height={100} className={css.Imagecss} />
+              <Image alt="Company Logo" src="/img/logo.jpg" width={90} height={90} className={css.Imagecss} />
               {!matches500 && <div><MenuOutlined style={{fontSize: "38px"}} onClick={showDrawer} /></div>}
             </div>
 
@@ -156,7 +156,7 @@ const onChange = (date, dateString) => {
                 <div onClick={() => scrollToSection(services)} className={css.link}>Main</div> 
                 <div onClick={() => scrollToSection(ourServices)} className={css.link}>Our Services</div>
                 <div onClick={() => scrollToSection(aboutUs)} className={css.link}>About us</div>
-                <div onClick={() => scrollToSection(reviews)} className={css.link}>Reviews</div>
+                {/* <div onClick={() => scrollToSection(reviews)} className={css.link}>Reviews</div> */}
                 <div onClick={() => scrollToSection(contact)} className={css.link}>Contact</div>
               </div>
             }
@@ -186,7 +186,7 @@ const onChange = (date, dateString) => {
                 <div onClick={() => scrollToSection(services)} className={css.link}>Main</div>
                 <div onClick={() => scrollToSection(ourServices)} className={css.link}>Our Services</div>
                 <div onClick={() => scrollToSection(aboutUs)} className={css.link}>About us</div>
-                <div onClick={() => scrollToSection(reviews)} className={css.link}>Reviews</div>
+                {/* <div onClick={() => scrollToSection(reviews)} className={css.link}>Reviews</div> */}
                 <div onClick={() => scrollToSection(contact)} className={css.link}>Contact</div>
               </div>
             </Drawer>
@@ -198,9 +198,9 @@ const onChange = (date, dateString) => {
                 <div className={css.mainCont}>
                     <div className={css.mainLay1}>
                         <div className={css.mainTitleBig}>
-                        {`Magic Movers LLC - Relocate with confidence!`}
+                        {`POOL TABLES and PIANOS.`}
                         </div>
-                        <div className={css.mainTitleSmall}>Full Service In-State Movers</div>
+                        <div className={css.mainTitleSmall}>Important:Magic Movers LLC assumes NO liability for readjustments, resynchronization or refocusing of such articles upon delivery! We do not move pool tables or pianos.</div>
                     </div>
                     <div className={css.form}>
                         <div className={css.getTitle}>Get Your Free Quote</div>
@@ -302,7 +302,7 @@ const onChange = (date, dateString) => {
             <div className={css.servicesbox}>
               <div className={css.boxs}>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <Image src="/img/muv3.avif"  alt="Company Logo" width={100} height={48} className={css.muv3} />
+                  <Image src="/img/muv2.avif"  alt="Company Logo" width={100} height={48} className={css.muv3} />
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
@@ -310,9 +310,9 @@ const onChange = (date, dateString) => {
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div>
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
-                Cash/Zelle/Card/Venmo
+                  Cash/Zelle/Card/Venmo
                 </div>
-                <div style={{background: "#FFC800", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
@@ -371,94 +371,22 @@ const onChange = (date, dateString) => {
                 </div> 
                 <div className={css.BookNow}>
                   Book Now
+                  <CaretRightOutlined />
                 </div>
               </div>
               <div className={css.boxs}>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <Image src="/img/muv3.avif" alt="Company Logo" width={100} height={48} className={css.muv3} />
+                  <Image src="/img/muv3.avif" alt="Company Logo" width={120} height={48} className={css.muv3} />
                 </div>
-                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
-                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
-                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$180
-                  <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
-                </div>
-                <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
-                Cash/Zelle/Card/Venmo
-                </div>
-                <div style={{background: "#FFC800", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
-                  Get a free Quote
-                </div>
-                <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
-                <div style={{fontSize: "14px", fontWeight: "500", marginTop: "15px", fontWeight: "600"}}>What&apos;s included:</div>
-
-                <div style={{alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "13px", marginLeft: "3px"}}>
-                  <div style={{ fontWeight: "600",  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div  style={{fontWeight: "600"}}>Use of Blankets</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Use of Wardrobe Boxes</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Disassembly / Reassembly</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Use of Tape & Protective Padding</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Use of Mattress Covers</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Use of Tools & Straps</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Use of Dollies & Equipment</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Tax & Basic Insurance</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Appliances</div>
-                </div> 
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Packing / Unpacking</div>
-                </div> 
-
-
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#ED1566", marginTop: "26px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES:</div>
-                </div> 
-
-                <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
-                  <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Fuel $80 one time flat fee</div>
-                </div> 
-                <div className={css.BookNow}>
-                  Book Now
-                </div>
-              </div>
-              <div className={css.boxs}>
-                <div style={{display: "flex", justifyContent: "center"}}>
-                  <Image src="/img/muv3.avif" alt="Company Logo" width={100} height={48} className={css.muv3} />
-                </div>
-                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
-                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
+                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>3 MOVERS AND A TRUCK</div>
+                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(LARGE 1 BDR, 2 BDR OR MEDIUM OFFICE)</div>
                 <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$149
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div>
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
                 Cash/Zelle/Card/Venmo
                 </div>
-                <div style={{background: "#FFC800", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
@@ -517,21 +445,22 @@ const onChange = (date, dateString) => {
                 </div> 
                 <div className={css.BookNow}>
                   Book Now
+                  <CaretRightOutlined />
                 </div>
               </div>
               <div className={css.boxs}>
                 <div style={{display: "flex", justifyContent: "center"}}>
-                  <Image src="/img/muv3.avif" width={100} height={48} className={css.muv3} alt="Movers"/>
+                  <Image src="/img/muv4.avif" alt="Company Logo" width={130} height={48} className={css.muv3} />
                 </div>
-                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
-                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
-                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$220
+                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>4 MOVERS AND A TRUCK</div>
+                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(LARGE 2 BDR, 3 BDR OR LARGE OFFICE)</div>
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$189
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div>
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
                 Cash/Zelle/Card/Venmo
                 </div>
-                <div style={{background: "#FFC800", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
@@ -590,7 +519,24 @@ const onChange = (date, dateString) => {
                 </div> 
                 <div className={css.BookNow}>
                   Book Now
+                  <CaretRightOutlined />
                 </div>
+              </div>
+              <div className={css.boxs} style={{height: "300px", width: "100%"}}>
+                <div style={{display: "flex", justifyContent: "center"}}>
+                  <Image src="/img/muv5.avif" width={80} height={45} className={css.muv3} alt="Movers"/>
+                </div>
+                <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>Long Distance moving</div>
+                <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$220
+                  <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
+                </div> 
+                <div style={{fontSize: "14px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center", lineHeight: "20px"}}>
+                  Call or Email our representatives to discuss details about your move and Get your <span style={{color: "red"}}>FREE Flat Fee Offer</span>
+                </div>
+                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                  Get a free Quote
+                </div>   
               </div>
               
             </div>
@@ -601,13 +547,17 @@ const onChange = (date, dateString) => {
             <Zurag />
             <div className={css.aboutdetail}>
               <div className={css.AboutTitle}>About us</div>
-              <div style={{marginTop: "40px"}}className={css.AboutDesc}>Customer satisfaction is at the heart of our mission. We believe in open communication, transparent pricing, and the personalized attention that every client deserves. Your peace of mind is our top priority, and we go above and beyond to exceed your expectations.</div>
-              <div style={{marginTop: "20px"}} className={css.AboutDesc}>Our office and fleet are conveniently located in the heart of Brentwood, Los Angeles CA - 90049. You can rest assured we will always be on time, anywhere, anytime.</div>
-              <div  style={{marginTop: "40px"}} className={css.AboutDesc}>We uphold our commitments, recognizing the significance of our clients trust, especially during the emotionally charged process of transitioning from one residence to another.</div>
-              <div style={{marginTop: "20px"}} className={css.AboutDesc}>Our reputation has been built on referrals and loyal customers, and we are committed to maintaining this tradition. </div>
+              <div style={{color: "#374151", marginTop: "40px", marginLeft: "10px"}} className={css.AboutDesc}> Customer satisfaction is at the heart of our mission. We believe in open communication, transparent pricing, and the personalized attention that every client deserves. Your peace of mind is our top priority, and we go above and beyond to exceed your expectations.</div>
+              <div style={{display:"flex",  color: "#374151", marginTop: "20px"}} className={css.AboutDesc}> 
+              <EnvironmentOutlined style={{fontSize: "25px", color: "#000", marginLeft:"-25px"}} /> Our office and fleet are conveniently located in the heart of Hollywood, Los Angeles CA - 90036. You can rest assured we will always be on time, anywhere, anytime.</div>
+              <div  style={{color: "#374151", marginTop: "40px", position: "relative"}} className={css.AboutDesc}>
+                <div style={{color: "#ffbd35", marginLeft:"-25px"}}> <Image width={70} height={70} alt="magic" src={"/img/balancing-scale-outline.png"}  /></div> We uphold our commitments, recognizing the significance of our clients trust, especially during the emotionally charged process of transitioning from one residence to another.</div>
+              <div style={{color: "#374151", marginTop: "20px"}} className={css.AboutDesc}> 
+              <div style={{color: "#ffbd35", marginLeft:"-25px"}}> <Image width={40} height={40} alt="magic" src={"/img/love.png"}  /></div> Our reputation has been built on referrals and loyal customers, and we are committed to maintaining this tradition. </div>
             </div>
-          </div> 
-            <div className={css.qacss}>
+          </div>  
+        </div>
+        {/* <div className={css.qacss}>
               <Collapse
                 bordered={false} 
                     defaultActiveKey={['1']}
@@ -617,35 +567,35 @@ const onChange = (date, dateString) => {
                     }}
                     items={getItems(panelStyle)}
                 /> 
-          </div>
-        </div>
-        <div ref={reviews} className={css.reviews}><h3>Reviews</h3></div>
+          </div> */}
+        {/* <div ref={reviews} className={css.reviews}><h3>Reviews</h3></div> */}
         <div ref={contact} className={css.contact}>
               <div className={css.contact2}>
                 <div className={css.FooterLogo}>
                   <div>
-                  <Image alt="Company Logo" src="/img/logo.jpg" width={200} height={150} className={css.imgFooter}/>
+                  <Image alt="Company Logo" src="/img/logo.jpg" width={200} height={170} className={css.imgFooter}/>
                   </div>
                   <div>Professional Moving Services at Lowest Rates!</div>
                 </div>
                 <div className={css.footerLayout2}>
                   <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
-                    <EnvironmentOutlined style={{fontSize: "28px"}}/> 
-                    11706 Dorothy St. Los Angeles, CA 90049
+                    <EnvironmentOutlined style={{ color: "#faad14", fontSize: "28px"}}/> 
+                    11706 Dorothy St. Los Angeles, CA 90036
                   </div>
                   <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
-                    <MailOutlined style={{fontSize: "28px"}}/> 
+                    <MailOutlined style={{ color: "#faad14", fontSize: "28px"}}/> 
                     magicmoversla@gmail.com
                   </div>
                   <div className={css.Icons} onClick={() => window.location.href = "tel:+2137158265"}>
-                    <PhoneOutlined rotate={90} style={{fontSize: "28px"}}/> (213) 715-8265
+                    <PhoneOutlined rotate={90} style={{ color: "#faad14", fontSize: "28px"}}/> (213) 715-8265
                   </div>
                   <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
-                    <ClockCircleOutlined style={{fontSize: "28px"}}/> 
-                    Mon - Sun 8:00 AM - 8:00 PM
+                    <ClockCircleOutlined style={{ color: "#faad14", fontSize: "28px"}}/> 
+                    Mon - Sun 7:00 AM - 8:00 PM
                   </div>
                 </div>
-                <div style={{display: "flex", alignItems: "center", fontSize: "20px"}}>License - CAL-T 192594</div> 
+
+                <div style={{display: "flex", alignItems: "center", fontSize: "20px"}}></div> 
               </div>
         </div>
         <div style={{width: "100%", background: "#fff", textAlign: "center", fontSize: "14px", padding: "10px 0px"}}>©2025 by Magic Movers LLC.</div>
