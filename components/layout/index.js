@@ -1,26 +1,29 @@
+import dynamic from "next/dynamic"; 
 import { Button, Collapse, DatePicker, Drawer, FloatButton, Input, message, Radio, Spin, theme } from "antd";
 import { useState, useRef, useEffect } from "react";
 import css from "./style.module.css";
 import { EnvironmentOutlined, MailOutlined, ClockCircleOutlined, PhoneOutlined, MenuOutlined, CaretRightOutlined  } from '@ant-design/icons';
 import Image from "next/image";
 import Zurag from "../zurag";
-import emailjs from "emailjs-com";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import emailjs from "emailjs-com"; 
+import "leaflet/dist/leaflet.css";
+
+
 const locations = [
-  { lat: 37.7749, lng: -122.4194, title: "San Francisco" },
-  { lat: 34.0522, lng: -118.2437, title: "Los Angeles" },
-  { lat: 40.7128, lng: -74.0060, title: "New York" },
+   
+  { lat: 34.05759105072021, lng: -118.24560731723486, name: "Los Angeles" },
+  { lat: 34.012678765475115, lng: -118.48855389823142, name: "Santa Monica" },
+  { lat: 34.091698349837976, lng: -118.4067443713288, name: "Beverly Hills" },
+  { lat: 34.16083099227308, lng:  -118.43576840631293, name: "Sherman Oaks" },
+  
+  
 ];
+const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import("react-leaflet").then((mod) => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), { ssr: false });
+ 
 
-const containerStyle = {
-  width: "100%",
-  height: "500px",
-};
-
-const center = {
-  lat: 37.7749,
-  lng: -122.4194,
-};
 const getItems = (panelStyle) => [
   {
     key: '1',
@@ -354,6 +357,7 @@ const getItems3 = (panelStyle) => [
   
 ];
 const BaseLayout = () => {
+  
   const services = useRef(null);
   const services2 = useRef(null);
   const ourServices = useRef(null);
@@ -514,8 +518,7 @@ const onChange = (date, dateString) => {
               </div>
             </Drawer>
           </div>
-        </div>
-
+        </div> 
         <div ref={services} className={css.services}> 
             <div className={css.mainCss}>
                 <div className={css.mainCont}>
@@ -867,7 +870,7 @@ const onChange = (date, dateString) => {
             </div>
           </div>
         </div>
-        <div ref={aboutUs} className={css.whyMagicCss}> 
+        <div   className={css.whyMagicCss}> 
           <div className={css.ourservicesCss} > 
             <div className={css.whyMagicTitle}>
               Why Magic Movers LLC?
@@ -901,7 +904,7 @@ const onChange = (date, dateString) => {
             </div>
           </div>  
         </div>
-        <div ref={aboutUs} className={css.whyMagicCss}> 
+        <div   className={css.whyMagicCss}> 
           <div className={css.ourservicesCss} > 
             <div className={css.whyMagicTitle}>
               How to work?
@@ -918,7 +921,7 @@ const onChange = (date, dateString) => {
                 /> 
           </div>  
         </div>
-        <div ref={aboutUs} className={css.whyMagicCss} style={{background: "#fafafa"}}> 
+        <div   className={css.whyMagicCss} style={{background: "#fafafa"}}> 
           <div className={css.ourservicesCss} > 
             <div className={css.whyMagicTitle} style={{color: "#000"}}>
             Q&A
@@ -935,36 +938,26 @@ const onChange = (date, dateString) => {
                 /> 
           </div>  
         </div>
-        <div ref={aboutUs} className={css.whyMagicCss} style={{background: "#fafafa"}}> 
+        <div className={css.whyMagicCss} style={{background: "##193e3d"}}> 
           <div className={css.ourservicesCss} > 
-            <div className={css.whyMagicTitle} style={{color: "#000"}}>
-            Areas We Serve
-
+            <div className={css.whyMagicTitle} style={{color: "#fff"}}>
+            Areas We Serve 
             </div>
                     <div>
-                      {/* google api key: AIzaSyA50mQ29ONmPn5XHuhE_T6_YTr5HLTUSF8 */}
-                    <LoadScript googleMapsApiKey="AIzaSyA50mQ29ONmPn5XHuhE_T6_YTr5HLTUSF8"> 
-                    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={4}>
-                      {locations.map((location, index) => (
-                        <Marker key={index} position={location} title={location.title} />
-                      ))}
-                    </GoogleMap>
-                  </LoadScript>
-                    </div>
+                      <MapContainer center={[34.05759105072021, -118.24560731723486]} zoom={10} style={{ height: "500px", width: "100%", zIndex: "0" }}>
+                          <TileLayer  
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                          />
+                          {locations.map((loc, index) => (
+                            <Marker key={index} position={[loc.lat, loc.lng]}>
+                              <Popup>{loc.name}</Popup>
+                            </Marker>
+                          ))}
+                      </MapContainer>
+                  </div>
           </div>  
-        </div>
-        {/* <div className={css.qacss}>
-              <Collapse
-                bordered={false} 
-                    defaultActiveKey={['1']}
-                    expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
-                    style={{
-                      background: token.colorBgContainer,
-                    }}
-                    items={getItems(panelStyle)}
-                /> 
-          </div> */}
-        {/* <div ref={reviews} className={css.reviews}><h3>Reviews</h3></div> */}
+        </div> 
         <div ref={contact} className={css.contact}> 
               <div className={css.contact2}>
                 <div className={css.FooterLogo}>
