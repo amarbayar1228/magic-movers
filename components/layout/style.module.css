@@ -310,10 +310,7 @@
     }
     .ourservicesCss{
       width: 100%;
-    } 
-    .aboutUs{
-      height: 1000px;
-    }
+    }  
     .aboutUsDetail{
       width: 100%;
       flex-direction: column-reverse;
