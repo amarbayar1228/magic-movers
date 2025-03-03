@@ -5,11 +5,22 @@ import { EnvironmentOutlined, MailOutlined, ClockCircleOutlined, PhoneOutlined, 
 import Image from "next/image";
 import Zurag from "../zurag";
 import emailjs from "emailjs-com";
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+const locations = [
+  { lat: 37.7749, lng: -122.4194, title: "San Francisco" },
+  { lat: 34.0522, lng: -118.2437, title: "Los Angeles" },
+  { lat: 40.7128, lng: -74.0060, title: "New York" },
+];
+
+const containerStyle = {
+  width: "100%",
+  height: "500px",
+};
+
+const center = {
+  lat: 37.7749,
+  lng: -122.4194,
+};
 const getItems = (panelStyle) => [
   {
     key: '1',
@@ -922,6 +933,24 @@ const onChange = (date, dateString) => {
                     }}
                     items={getItems3(panelStyle)}
                 /> 
+          </div>  
+        </div>
+        <div ref={aboutUs} className={css.whyMagicCss} style={{background: "#fafafa"}}> 
+          <div className={css.ourservicesCss} > 
+            <div className={css.whyMagicTitle} style={{color: "#000"}}>
+            Areas We Serve
+
+            </div>
+                    <div>
+                      {/* google api key: AIzaSyA50mQ29ONmPn5XHuhE_T6_YTr5HLTUSF8 */}
+                    <LoadScript googleMapsApiKey="AIzaSyA50mQ29ONmPn5XHuhE_T6_YTr5HLTUSF8"> 
+                    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={4}>
+                      {locations.map((location, index) => (
+                        <Marker key={index} position={location} title={location.title} />
+                      ))}
+                    </GoogleMap>
+                  </LoadScript>
+                    </div>
           </div>  
         </div>
         {/* <div className={css.qacss}>
