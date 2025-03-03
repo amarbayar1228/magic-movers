@@ -28,8 +28,7 @@
     height: 250px;
     padding: 50px 20px;
   }
-   .aboutUs, .reviews {
-    height: 1000px;
+   .aboutUs, .reviews { 
     padding: 20px;
   }
 
@@ -232,6 +231,12 @@
     flex-direction: column;
     color: #fff;
   }
+  .whyMagicCss{
+    background-color: rgb(25 62 61 / 85%);
+    color: #fff;
+    padding: 50px 10px;
+    margin-top: 50px;
+  }
   .aboutUsDetail{
     display: flex;
     margin: 50px auto;
@@ -269,16 +274,19 @@
     display: flex;
     gap: 40px;
   }
+
+.whyMagicTitle{
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
   @media only screen and (max-width: 1536px) { 
     .qacss{
       width: 80%;
     }
     .aboutUsDetail{
       width: 900px;  
-    }
-    .aboutUs{
-      height: 897px;
-    }
+    } 
     .flex{
       width: 90%;
     }
@@ -297,11 +305,14 @@
     }
   }
   @media only screen and (max-width: 768px) {
+    .contact{
+      height: 100%;
+    }
     .ourservicesCss{
       width: 100%;
     } 
     .aboutUs{
-      height: 1200px;
+      height: 1000px;
     }
     .aboutUsDetail{
       width: 100%;
@@ -388,6 +399,12 @@
     }
   }
   @media only screen and (max-width: 500px) { 
+    .whyMagicTitle{
+      font-size: 30px;
+    }
+    .contact{ 
+      height: 100%; 
+    }
     .imgFlex{
       flex-direction: column;
       gap: 20px;
@@ -412,6 +429,9 @@
     .hero{
       position: relative;
     }
+  }
+  @media only screen and (max-width: 400px) {
+    
   }
   /* scroll to top button */
   /* .top-btn-position {
