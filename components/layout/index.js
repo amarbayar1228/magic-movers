@@ -14,8 +14,31 @@ const locations = [
   { lat: 34.05759105072021, lng: -118.24560731723486, name: "Los Angeles" },
   { lat: 34.012678765475115, lng: -118.48855389823142, name: "Santa Monica" },
   { lat: 34.091698349837976, lng: -118.4067443713288, name: "Beverly Hills" },
+  { lat: 34.104441161593016, lng: -118.51648502020402, name: "Brentwood" },
+  { lat: 34.083610027677125, lng: -118.54497999354102, name: "Pacific Palisades" },
   { lat: 34.16083099227308, lng:  -118.43576840631293, name: "Sherman Oaks" },
-  
+  { lat: 33.735929216638105, lng:  -118.29482295738991, name: "San Pedro" },
+  { lat: 34.0139623608645, lng:  -118.43767491115526, name: "Mar Vista" },
+  { lat: 34.02078487857845,  lng: -118.39494906133692, name: "Culver City" },
+  { lat: 34.169667920963114, lng: -118.61172944463954, name: "Woodland Hills" },
+  { lat: 33.76911816909051,  lng: -118.18560489523813, name: "Long Beach" },
+  { lat: 34.13737470632144,  lng: -118.65957559531174, name: "Calabasas" },
+  { lat: 34.14333842264153,  lng: -118.39324154131123, name: "Studio City" },
+  { lat: 34.091452110775855, lng: -118.32764413159798, name: "Hollywood" },
+  { lat: 34.04338676673281, lng: -118.35315656847716, name: "Mid-City" },
+  { lat: 34.187296883371054, lng: -118.3891163185336, name: "North Hollywood" },
+  { lat: 34.155832162554404, lng: -118.48687050127783, name: "Encino" },
+  { lat: 34.09400189114344, lng: -118.36669540015637, name: "West Hollywood" },
+  { lat: 34.09994500948251, lng: -118.26571759831695, name: "Silver Lake" },
+  {lat: 34.14722140260508, lng: -118.24641693492552, name: "Glendale"},
+  {lat: 33.74738176298284, lng: -118.38567609469865, name: "Rancho Palos Verdes"},
+  {lat: 33.97903829351712, lng: -118.41419935777493, name: "Playa Vista"},
+  {lat: 34.037341249599336, lng: -118.69128004470258, name: "Malibu"},
+  {lat: 34.14545942241944, lng: -118.14497143594124, name: "Pasadena"},
+  {lat: 34.18268549548751, lng: -118.30970029771422, name: "Burbank"},
+  {lat: 33.84861894461722, lng: -118.38491492914915, name: "Redondo Beach"},
+  {lat: 34.065464786288835, lng: -118.43871577993836, name: "Westwood"},
+  {lat: 33.84109534606345, lng: -118.33739321560873, name: "Torrance"},
   
 ];
 const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
@@ -938,13 +961,47 @@ const onChange = (date, dateString) => {
                 /> 
           </div>  
         </div>
-        <div className={css.whyMagicCss} style={{background: "##193e3d"}}> 
+        <div className={css.whyMagicCss} style={{background: "#faad142b"}}> 
           <div className={css.ourservicesCss} > 
-            <div className={css.whyMagicTitle} style={{color: "#fff"}}>
+            <div className={css.whyMagicTitle} style={{color: "rgba(25, 62, 61, 0.9)"}}>
             Areas We Serve 
             </div>
-                    <div>
-                      <MapContainer center={[34.05759105072021, -118.24560731723486]} zoom={10} style={{ height: "500px", width: "100%", zIndex: "0" }}>
+                    <div className={css.mapsLayout}>
+                      <div className={css.mapsTitles}>
+                          <div style={{width: "215px"}}> 
+                            <ul><li>Los Angeles</li></ul>
+                            <ul><li>Santa Monica</li></ul>
+                            <ul><li>Beverly Hills</li></ul>
+                            <ul><li>Brentwood</li></ul>
+                            <ul><li>Pacific Palisades</li></ul>
+                            <ul><li>Sherman Oaks</li></ul>
+                            <ul><li>San Pedro</li></ul>
+                            <ul><li>Mar Vista</li></ul>
+                            <ul><li>Culver City</li></ul>
+                            <ul><li>Woodland Hills</li></ul>
+                            <ul><li>Long Beach</li></ul>
+                            <ul><li>Calabasas</li></ul>
+                            <ul><li>Studio City</li></ul>
+                            <ul><li>Hollywood</li></ul>
+                          </div>
+                          <div style={{width: "215px"}}> 
+                            <ul><li>Mid City</li></ul>
+                            <ul><li>North Hollywood</li></ul>
+                            <ul><li>Encino</li></ul>
+                            <ul><li>West Hollywood</li></ul>
+                            <ul><li>Silver Lake</li></ul>
+                            <ul><li>Glendale</li></ul>
+                            <ul><li>Rancho Palos Verdes</li></ul>
+                            <ul><li>Playa Vista</li></ul>
+                            <ul><li>Malibu</li></ul>
+                            <ul><li>Pasadena</li></ul>
+                            <ul><li>Burbank</li></ul>
+                            <ul><li>Redondo Beach</li></ul>
+                            <ul><li>Westwood</li></ul>
+                            <ul><li>Torrance</li></ul>
+                          </div>
+                      </div>
+                      <MapContainer center={[34.05759105072021, -118.24560731723486]} zoom={10} style={{ height: "500px", width: "90%", zIndex: "0" }}>
                           <TileLayer  
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

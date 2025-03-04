@@ -280,6 +280,17 @@
   text-align: center;
   margin-bottom: 50px;
 }
+.mapsLayout{
+  display: flex;
+  gap: 100px;
+  color: rgba(25, 62, 61, 0.9);
+    font-weight: 600;
+}
+.mapsTitles{
+  display: flex;
+  gap: 30px;
+}
+/* ------------------ 1536px  -------------------------------==========================================================*/
   @media only screen and (max-width: 1536px) { 
     .qacss{
       width: 80%;
@@ -304,6 +315,16 @@
       padding: 0px 10px;
     }
   }
+ @media only screen and (max-width: 1080px) { 
+  .mapsLayout{ 
+    flex-direction: column;
+    gap: 50px;
+    
+  }
+  .mapsTitles{
+    gap: 0px;
+  }
+ }
   @media only screen and (max-width: 768px) {
     .contact{
       height: 100%;
