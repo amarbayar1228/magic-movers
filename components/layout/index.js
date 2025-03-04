@@ -1,6 +1,6 @@
 
 import dynamic from "next/dynamic"; 
-import { Button, Collapse, DatePicker, Drawer, FloatButton, Input, message, Radio, Spin, theme } from "antd";
+import {   Collapse, DatePicker, Drawer, FloatButton, Input, message, Radio,   theme } from "antd";
 import { useState, useRef, useEffect } from "react";
 import css from "./style.module.css";
 import { EnvironmentOutlined, MailOutlined, ClockCircleOutlined, PhoneOutlined, MenuOutlined, CaretRightOutlined  } from '@ant-design/icons';
@@ -8,6 +8,7 @@ import Image from "next/image";
 import Zurag from "../zurag";
 import emailjs from "emailjs-com";   
 import "leaflet/dist/leaflet.css"; 
+import Loading from "../loading";
 
 
 const locations = [
@@ -398,6 +399,7 @@ const BaseLayout = () => {
   const [matches768, setMatches7] = useState(false);
   const [matches500, setMatches5] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [loadingIcon, setLoadingIcon] = useState(true);
 
   const [mailData, setMailData] = useState({
     to_name: "", // your name
@@ -427,6 +429,11 @@ const BaseLayout = () => {
     background: token.colorFillAlter,  
   };
  
+  useEffect(()=>{ 
+    setTimeout(()=>{
+      setLoadingIcon(false)
+    },4000)
+  },[])
    
   // ScrollToSection function
   const scrollToSection = (elementRef) => {
@@ -459,7 +466,7 @@ const onChange = (date, dateString) => {
   }, []);
   const sendMail = () => { 
     setLoading(true);
-    console.log("mailData: ", mailData);
+  
     emailjs
         .send(
           "service_vfeb1rk", // service id service_rq0sez5
@@ -493,6 +500,8 @@ const onChange = (date, dateString) => {
   }
   return (
     <div>
+      {loadingIcon ? <Loading /> : null}
+      
       <FloatButton.BackTop />
       <div className={css.App}>
         <div ref={heroRef} className={css.hero}> {/* Add ref here */}
