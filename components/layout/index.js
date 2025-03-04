@@ -1,3 +1,4 @@
+
 import dynamic from "next/dynamic"; 
 import { Button, Collapse, DatePicker, Drawer, FloatButton, Input, message, Radio, Spin, theme } from "antd";
 import { useState, useRef, useEffect } from "react";
@@ -5,8 +6,8 @@ import css from "./style.module.css";
 import { EnvironmentOutlined, MailOutlined, ClockCircleOutlined, PhoneOutlined, MenuOutlined, CaretRightOutlined  } from '@ant-design/icons';
 import Image from "next/image";
 import Zurag from "../zurag";
-import emailjs from "emailjs-com"; 
-import "leaflet/dist/leaflet.css";
+import emailjs from "emailjs-com";   
+import "leaflet/dist/leaflet.css"; 
 
 
 const locations = [
@@ -40,7 +41,7 @@ const locations = [
   {lat: 34.065464786288835, lng: -118.43871577993836, name: "Westwood"},
   {lat: 33.84109534606345, lng: -118.33739321560873, name: "Torrance"},
   
-];
+]; 
 const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
 const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
 const Marker = dynamic(() => import("react-leaflet").then((mod) => mod.Marker), { ssr: false });
@@ -51,7 +52,7 @@ const getItems = (panelStyle) => [
   {
     key: '1',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Budget Friendly</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
       <div>1. We are one of very few companies that include all protective padding in our rates. </div>
       <div>2. We do not charge extra fees for materials, equipment, few handyman services, insurance, long walks, stairs, appliance reconnection and disassembly/re-assembly. Its all included in hourly rates.</div>
       <div>3. We are also respectful of your paid time and take breaks off the clock to save you even more.</div> 
@@ -62,7 +63,7 @@ const getItems = (panelStyle) => [
   {
     key: '2',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Insured</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
       <div>Magic Movers LLC carries all required insurance and basic coverage is included in your rate (up to 20k in damages) for your belongings, to protect them during the move.</div>
     </div>,
     style: panelStyle,
@@ -70,7 +71,7 @@ const getItems = (panelStyle) => [
   {
     key: '3',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Professional</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
       <div>Our movers are highly trained professionals who routinely handle the most complicated moves. You can trust them to know what needs to be done and to be courteous and professional at all times. 
       When you hire Magic Movers LLC you can relax knowing that you can rely on our movers to arrive on time and to complete your move as quickly and efficiently as possible.</div>
     </div>,
@@ -79,7 +80,7 @@ const getItems = (panelStyle) => [
   {
     key: '4',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Experienced</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
       <div>With years of experience in moving business we know how to carefully pack shrink-wrap and/or cover your furniture and appliances with padded blankets to protect against damage, load, transport and unload your belongings safely. </div>
     </div>,
     style: panelStyle,
@@ -87,7 +88,7 @@ const getItems = (panelStyle) => [
   {
     key: '5',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Privacy Policy</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px", textDecoration: "underline"}}> 
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px", textDecoration: "underline"}}> 
       <div>Magic Movers LLC</div>
       <div style={{fontWeight: "500"}}>CAL-T 192594</div>
       <div style={{fontWeight: "500", marginTop: "10px"}}>General</div>
@@ -127,7 +128,7 @@ const getItems = (panelStyle) => [
   {
     key: '6',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Terms & Conditions</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}> 
       IMPORTANT NOTICE
 
 <div>The quoted rates are believed to be in accordance with the rates prescribed by the Bureau of Household Goods and Services as published in Its Maximum Rate Tariff 4 and are to be applies fo the number of hours involved in providing service, to the actual weight, or to the actual number of other units of measurement, subject to the designated minimum provisions, unless in conflict with the rates and regulations of that tariff. Copies of the tariff are open for public inspection at the Bureau’s office in Sacramento and at the offices of the carrier.</div>
@@ -221,7 +222,7 @@ const getItems2 = (panelStyle) => [
   {
     key: '1',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Reserve your date</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       <div>Book us online by using Book Now button, to see our availability, secure your date and starting time. Thats the easiest way. This service is free of charge and it is created for your convenience, for a faster booking process. </div>
       <div>No deposits or pre-payment required.</div>
       <div>Shortly after online booking, a representative will get it touch with you to discuss essential details.</div>
@@ -233,7 +234,7 @@ const getItems2 = (panelStyle) => [
   {
     key: '2',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Confirm booking/ Agreement</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       <div> After submitting your online booking request or quote form, one of our representatives will get in touch with you to discuss essential details about your move, like parking, additional notes & instructions, listen & answering your questions and concerns.</div>
       <div> After the confirmation, we will send the Combined Agreement & Freight Bill, Important Notice and Booklet  for your review, using your email address. Signing the electronic version of the Agreement is not necessary. These documents are sent for your review and information only. </div>
       <div> Upon the arrival of the movers, you will be handed the physical Agreement for signatures. That is when the counting of the time starts.</div>
@@ -243,7 +244,7 @@ const getItems2 = (panelStyle) => [
   {
     key: '3',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Day of the move/ Loading</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       <div> Day of the move/ Loading</div>
       <div> Upon arrival of the movers, you will be handed the physical Agreement for signatures. This is the moment when the counting of the time starts.</div>
       <div> It is strongly recommended that the shipper is ready and packed as much as possible upon the arrival of the movers. This means boxes with personal or kitchen items should be packed and ready to go. This not only will speed up the moving process but will also save you time & money. Furniture, beds, appliances, art and heavy items to be left in care of professionals. </div>
@@ -258,7 +259,7 @@ const getItems2 = (panelStyle) => [
   {
     key: '4',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Safe Delivery/ Unloading</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       <div> After the delivery and unloading, we will reinstall/re-assemble your furnitures, connect your appliances, place boxes accordingly and at your request, mount your TVs. After all our services are done, the time will be stopped and you will be handed the Combined Agreement and Freight Bill for final signature of receipt of your belongings. The total on the bill must be paid using the payment method of your convenience, after the stopping of the time.  </div>
       <div> Congratulations!</div>
       <div> Your move is done.</div>
@@ -273,7 +274,7 @@ const getItems3 = (panelStyle) => [
   {
     key: '1',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Are you insured?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       <div> We are fully insured moving company with liability and cargo insurance.</div>
       <div> Basic insurance of 0.60 cents per pound per article  (up to $20.000 in damages) is included in your rate, as well as taxes.</div>
     </div>,
@@ -282,7 +283,7 @@ const getItems3 = (panelStyle) => [
   {
     key: '2',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Can you pack my stuff or does it have to be packed?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       <div> We recommend that you start packing your belongings yourself days in advance before the move, in order to save time and money. Depending on the volume of work, packing can add quite a few hours.</div>
 
       <div> We also recommend purchasing boxes from the vendor of your choice.</div>
@@ -296,7 +297,7 @@ const getItems3 = (panelStyle) => [
   {
     key: '3',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Is Packing / Unpacking included in hourly rate?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       <div> Yes, packing services are included in our rates. </div>
       <div> Packing supplies included in rate: FREE wardrobe boxes (if returned on the same day). FREE plastic wrap. FREE tape. FREE blankets (if returned on the same day).</div>
       <div style={{lineHeight: "2px", marginTop: "20px"}}>  
@@ -313,7 +314,7 @@ const getItems3 = (panelStyle) => [
   {
     key: '4',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Do you provide disassembly and reassembly of my furniture?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       Magic Movers provides disassemble and re-assemble of your furniture. This service is included in the rates of local or long distance moves! No extra fees.
     </div>,
     style: panelStyle,
@@ -321,7 +322,7 @@ const getItems3 = (panelStyle) => [
   {
     key: '5',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Can you mount my TV?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       TV Mounting is an extra handyman service that we offer, and it comes with additional fee of $100/item.
     </div>,
     style: panelStyle,
@@ -329,7 +330,7 @@ const getItems3 = (panelStyle) => [
   {
     key: '6',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>How about Appliances?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
       <div>Transportation of regular appliances from ground to ground floor or via elevator is included in the hourly rate. </div>
       <div>However, moving appliances via sets of stairs (more than 5 steps)or extra large appliances will add $100/item to your bill. </div>
       <div>IMPORTANT: Magic Movers LLC assumes NO liability for readjustments, resynchronization or refocusing of such articles upon delivery!</div>
@@ -339,7 +340,7 @@ const getItems3 = (panelStyle) => [
   {
     key: '7',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Do you move unique or extra large items?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
         <div>Unique or large items are part of our job. Extra heavy items like safe, china cabinet, grand father clocks, extra large outdoor items will add a $100/item to your bill and it can be discussed in advance. Contact us for more details about your unique/heavy items. </div>
         <div>IMPORTANT: Magic Movers LLC assumes NO liability for readjustments, resynchronization or refocusing of such articles upon delivery!</div>
     </div>,
@@ -348,7 +349,7 @@ const getItems3 = (panelStyle) => [
   {
     key: '8',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>What is Double Drive Time?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
         The Double Drive Time is a California Law that requires moving companies to double traveling time from pickup to delivery point. i.e. If it takes 15 minutes to drive from pickup to delivery, the moving company will note 30 minutes as a driving time. Double Drive Time is there to cover workers traveling time and it is included in hourly rate.
     </div>,
     style: panelStyle,
@@ -356,31 +357,30 @@ const getItems3 = (panelStyle) => [
   {
     key: '9',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Do you have minimum requirements?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
         Minimum booking policy for our services is 3 hours. 
     </div>,
     style: panelStyle,
   },
   {
-    key: '9',
+    key: '10',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Do I have to pay a deposit?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
         No deposit required.
     </div>,
     style: panelStyle,
   },
   {
-    key: '10',
+    key: '11',
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Can I Re-schedule my move?</div>,
-    children: <div style={{fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
+    children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px"}}>
         In the event of re-scheduling of the date for moving services, the shipper has the options to re-schedule the move one time, free of charge. If the move has been re-scheduled more than one time from its original date, the carrier shall charge the shipper a lost opportunities fee of $327 at the end of the move or shall consider the move “cancelled by shipper” and cancellation notice will be sent, without any fees.
     </div>,
     style: panelStyle,
   },
   
 ];
-const BaseLayout = () => {
-  
+const BaseLayout = () => { 
   const services = useRef(null);
   const services2 = useRef(null);
   const ourServices = useRef(null);
@@ -426,6 +426,7 @@ const BaseLayout = () => {
   const panelStyle = { 
     background: token.colorFillAlter,  
   };
+ 
    
   // ScrollToSection function
   const scrollToSection = (elementRef) => {
@@ -873,7 +874,7 @@ const onChange = (date, dateString) => {
                   <CaretRightOutlined />
                 </div>
               </div>
-              <div className={css.boxs} style={{height: "300px"}}>
+              <div className={css.boxs} style={{height: "40%"}}>
                 <div style={{display: "flex", justifyContent: "center"}}>
                   <Image src="/img/muv5.avif" width={80} height={45} className={css.muv3} alt="Movers"/>
                 </div>
@@ -1001,13 +1002,14 @@ const onChange = (date, dateString) => {
                             <ul><li>Torrance</li></ul>
                           </div>
                       </div>
-                      <MapContainer center={[34.05759105072021, -118.24560731723486]} zoom={10} style={{ height: "500px", width: "90%", zIndex: "0" }}>
+                      <MapContainer center={[34.05759105072021, -118.24560731723486]} zoom={10} style={{ height: "500px", width: "90%", zIndex: "0", margin: "0px auto" }}>
                           <TileLayer  
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                           />
                           {locations.map((loc, index) => (
-                            <Marker key={index} position={[loc.lat, loc.lng]}>
+                            <Marker key={index} position={[loc.lat, loc.lng]} 
+                            >
                               <Popup>{loc.name}</Popup>
                             </Marker>
                           ))}
