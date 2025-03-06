@@ -91,7 +91,7 @@ const getItems = (panelStyle) => [
     label: <div style={{fontWeight: "500", fontSize: "18px"}}>Privacy Policy</div>,
     children: <div style={{color: "#374151", fontSize: "18px", margin: "0px 23px", lineHeight: "21px", textDecoration: "underline"}}> 
       <div>Magic Movers LLC</div>
-      <div style={{fontWeight: "500"}}>CAL-T 192594</div>
+      {/* <div style={{fontWeight: "500"}}>CAL-T 192594</div> */}
       <div style={{fontWeight: "500", marginTop: "10px"}}>General</div>
       <div>This privacy policy discloses the privacy practices for www.goldentigerag.us</div>
       <div>This privacy policy applies solely to information collected by this web site.</div>
@@ -122,7 +122,7 @@ const getItems = (panelStyle) => [
       <div>If you would like to: access, correct, amend or delete any personal information we have about you, or simply want more information, contact us via telephone at (213) 715-8265 or via email at dimalexagllc@gmail.com</div>
       <div>Phone Number: (213) 715-8265</div>
       <div>E-mail: magicmoversla@gmail.com</div>
-      <div>Location: 11706 Dorothy St. Los Angeles</div> 
+      <div>Los Angeles CA 90036</div> 
     </div>,
     style: panelStyle,
   },
