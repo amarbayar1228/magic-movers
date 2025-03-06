@@ -723,7 +723,7 @@ const onChange = (date, dateString) => {
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#ED1566", marginTop: "26px", marginLeft: "3px"}}>
                   <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES:</div>
+                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES: 50$</div>
                 </div> 
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
@@ -797,7 +797,7 @@ const onChange = (date, dateString) => {
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#ED1566", marginTop: "26px", marginLeft: "3px"}}>
                   <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES:</div>
+                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES: 50$</div>
                 </div> 
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
@@ -871,7 +871,7 @@ const onChange = (date, dateString) => {
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#ED1566", marginTop: "26px", marginLeft: "3px"}}>
                   <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES:</div>
+                  <div style={{fontWeight: "600"}}>ADDITIONAL FEES: 50$</div>
                 </div> 
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
@@ -1037,7 +1037,7 @@ const onChange = (date, dateString) => {
                 <div className={css.footerLayout2}>
                   <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
                     <EnvironmentOutlined style={{ color: "#faad14", fontSize: "28px"}}/> 
-                    11706 Dorothy St. Los Angeles, CA 90036
+                      Los Angeles, CA 90036
                   </div>
                   <div className={css.Icons} onClick={() => window.location.href = "mailto:example@email.com"}>
                     <MailOutlined style={{ color: "#faad14", fontSize: "28px"}}/> 
