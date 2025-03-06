@@ -728,7 +728,7 @@ const onChange = (date, dateString) => {
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
                   <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Fuel $80 one time flat fee</div>
+                  <div style={{fontWeight: "600"}}>Fuel $50 one time flat fee</div>
                 </div> 
                 <div className={css.BookNow}>
                   Book Now
@@ -802,7 +802,7 @@ const onChange = (date, dateString) => {
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
                   <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Fuel $80 one time flat fee</div>
+                  <div style={{fontWeight: "600"}}>Fuel $50 one time flat fee</div>
                 </div> 
                 <div className={css.BookNow}>
                   Book Now
@@ -876,7 +876,7 @@ const onChange = (date, dateString) => {
 
                 <div style={{ alignItems: "center", fontSize: "14px", display: "flex", gap: "8px", color: "#808080", marginTop: "6px", marginLeft: "3px"}}>
                   <div style={{  background: "#808080", width: "5px", height: "5px", borderRadius: "50%"}}></div>
-                  <div style={{fontWeight: "600"}}>Fuel $80 one time flat fee</div>
+                  <div style={{fontWeight: "600"}}>Fuel $50 one time flat fee</div>
                 </div> 
                 <div className={css.BookNow}>
                   Book Now
