@@ -9,6 +9,7 @@ import Zurag from "../zurag";
 import emailjs from "emailjs-com";   
 import "leaflet/dist/leaflet.css"; 
 import Loading from "../loading";
+import axios from "../../axios-orders";
 
 
 const locations = [
@@ -412,6 +413,7 @@ const BaseLayout = () => {
     moving_size: "",
     form_name: "magicmoversla@gmail.com" // tuhai n hvniih
   });
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       setMatches(window.matchMedia("(min-width: 1024px)").matches);
@@ -424,7 +426,41 @@ const BaseLayout = () => {
       window.matchMedia("(min-width: 500px)").addEventListener('change', e => setMatches5(e.matches));
     }
   }, []);
-  const { token } = theme.useToken();
+
+  useEffect(()=>{
+
+    const localData = localStorage.getItem("user");
+    if(localData){  
+      console.log("user exists")
+    } else {
+      console.log("no user exists")
+      localStorage.setItem("user", "1");
+      axios
+        .get(`customer.json`)
+        .then((res) => { 
+            const data = Object.entries(res.data).reverse();   
+            if(data[0][1].user){ 
+              const count = data[0][1].user + 1 
+              const body = {
+                user: count
+              }
+               axios
+                .patch(`customer/${data[0][0]}.json`, body)
+                .then((res) => { 
+
+                }) 
+            }
+        })
+      
+      // axios
+      // .patch(`customer/-OMRC4M59wiF097j8T22.json`, body)
+      // .then((res) => {
+        
+      // }) 
+    } 
+  },[]);
+
+  const { token } = theme.useToken(); 
   const panelStyle = { 
     background: token.colorFillAlter,  
   };
