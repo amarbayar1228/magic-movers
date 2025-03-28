@@ -667,7 +667,7 @@ const onChange = (date, dateString) => {
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>2 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
-                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$109
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$98.9
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div>
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
@@ -741,7 +741,7 @@ const onChange = (date, dateString) => {
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>3 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(LARGE 1 BDR, 2 BDR OR MEDIUM OFFICE)</div>
-                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$149
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$138.9
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div>
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
@@ -815,7 +815,7 @@ const onChange = (date, dateString) => {
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>4 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(LARGE 2 BDR, 3 BDR OR LARGE OFFICE)</div>
-                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$189
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$178.9
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div>
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
@@ -889,7 +889,7 @@ const onChange = (date, dateString) => {
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>Long Distance moving</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(STUDIO, 1 BDR OR SMALL OFFICE)</div>
-                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$220
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$209.9
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div> 
                 <div style={{fontSize: "14px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center", lineHeight: "20px"}}>
