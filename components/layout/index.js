@@ -1,6 +1,6 @@
 
 import dynamic from "next/dynamic"; 
-import {   Collapse, DatePicker, Drawer, FloatButton, Input, message, Radio,   theme } from "antd";
+import {   Collapse, DatePicker, Drawer, FloatButton, Input, message, Modal, Radio,   theme } from "antd";
 import { useState, useRef, useEffect } from "react";
 import css from "./style.module.css";
 import { EnvironmentOutlined, MailOutlined, ClockCircleOutlined, PhoneOutlined, MenuOutlined, CaretRightOutlined  } from '@ant-design/icons';
@@ -10,6 +10,7 @@ import emailjs from "emailjs-com";
 import "leaflet/dist/leaflet.css"; 
 import Loading from "../loading";
 import axios from "../../axios-orders";
+import FormCont from "../form";
 
 
 const locations = [
@@ -401,6 +402,16 @@ const BaseLayout = () => {
   const [matches500, setMatches5] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loadingIcon, setLoadingIcon] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   const [mailData, setMailData] = useState({
     to_name: "", // your name
@@ -599,87 +610,7 @@ const onChange = (date, dateString) => {
                         Full Service In-State Movers 
                         </div>
                     </div>
-                    <div className={css.form}>
-                        <div className={css.getTitle}>Get Your Free Quote</div>
-                        <div className={css.getTitleSmall}>Moving Size <span style={{color: "rgba(25, 62, 61, 0.9)", fontSize: "25px"}}>*</span></div>
-                        <div className={css.groupRadio}> 
-                            <Radio.Group
-                                // style={{ display: 'flex', flexDirection: 'column' }}
-                                className={css.radioGroupCss}
-                                name="radiogroup"
-                                defaultValue={1}
-                                onChange={(e)=> setMailData({ ...mailData, moving_size: e.target.value })}
-                                size="large"
-                                options={[
-                                {
-                                    value:"Studio",
-                                    label: <span className={css.radioTitle}>Studio</span>,
-                                },
-                                {
-                                    value: "1 Bedroom",
-                                    label: <span className={css.radioTitle}>1 Bedroom</span>,
-                                },
-                                {
-                                    value: "2 Bedroom",
-                                    label: <span className={css.radioTitle}>2 Bedroom</span>,
-                                },
-                                {
-                                    value: "3+ Bedroom",
-                                    label: <span className={css.radioTitle}>3+ Bedroom</span>,
-                                },
-                                ]}
-                            />
-                        </div>
-                        <div className={css.pickLo}>
-                            <div style={{display: "flex", flexDirection: "column",  gap: "10px"}}> 
-                                <div className={css.getTitleSmall}>Pick-Up Location <span style={{color: "rgba(25, 62, 61, 0.9)", fontSize: "25px"}}>*</span></div>
-                                <div>
-                                  <Input placeholder="Pick-Up Location" size="large" value={mailData.pick_up_location} 
-                                    onChange={(e) => setMailData({ ...mailData, pick_up_location: e.target.value })} 
-                                /></div>
-                            </div>
-                            <div style={{display: "flex", flexDirection: "column",  gap: "10px"}}> 
-                                <div className={css.getTitleSmall}>Drop off Location <span style={{color: "rgba(25, 62, 61, 0.9)", fontSize: "25px"}}>*</span></div>
-                                <div><Input placeholder="Drop off Location" size="large"  value={mailData.drop_off_location}
-                                onChange={(e)=> setMailData({ ...mailData, drop_off_location: e.target.value })}/></div>
-                            </div>
-                        </div>
-                        <div className={css.pickLo}>
-                            <div style={{display: "flex", flexDirection: "column",  gap: "10px"}}> 
-                                <div className={css.getTitleSmall}>Moving Date <span style={{color: "rgba(25, 62, 61, 0.9)", fontSize: "25px"}}>*</span></div>
-                                <div>
-                                <DatePicker onChange={onChange} size="large" />
-                                  </div>
-                            </div>
-                            <div style={{display: "flex", flexDirection: "column",  gap: "10px"}}> 
-                                <div className={css.getTitleSmall}>Name <span style={{color: "rgba(25, 62, 61, 0.9)", fontSize: "25px"}}>*</span></div>
-                                <div><Input placeholder="Name" size="large"  value={mailData.to_name}
-                                 onChange={(e)=> setMailData({ ...mailData, to_name: e.target.value })}/></div>
-                            </div> 
-                        </div>
-                        <div className={css.pickLo}>
-                            <div style={{display: "flex", flexDirection: "column",  gap: "10px"}}> 
-                                <div className={css.getTitleSmall}>Phone <span style={{color: "rgba(25, 62, 61, 0.9)", fontSize: "25px"}}>*</span></div>
-                                <div><Input placeholder="Phone" size="large" value={mailData.phone_number} onChange={(e)=> setMailData({ ...mailData, phone_number: e.target.value })}/></div>
-                            </div>
-                            <div style={{display: "flex", flexDirection: "column",  gap: "10px"}}> 
-                                <div className={css.getTitleSmall}>E-mail <span style={{color: "rgba(25, 62, 61, 0.9)", fontSize: "25px"}}>*</span></div>
-                                <div><Input placeholder="E-mail" size="large" value={mailData.from_name}  onChange={(e)=> setMailData({ ...mailData, from_name: e.target.value })}/></div>
-                            </div> 
-                        </div>
-                        
-                        <div style={{marginTop: "20px"}}> </div> 
-                        <div className={css.submitCss} onClick={()=> sendMail()}
-                           style={{
-                            opacity: loading ? 0.6 : 1,
-                            pointerEvents: loading ? "none" : "auto",
-                            cursor: loading ? "not-allowed" : "pointer",
-                          }}
-                          >
-                                 {loading ? "Loading..." : "Submit"}
-                        </div>
-
-                    </div>
+                   <FormCont />
                 </div>
             </div>
         </div>
@@ -709,7 +640,8 @@ const onChange = (date, dateString) => {
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
                   Cash/Zelle/Card/Venmo
                 </div>
-                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                <div style={{background: "rgba(25, 62, 61, 0.9)", cursor: "pointer",  color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}
+                onClick={showModal} >
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
@@ -783,7 +715,8 @@ const onChange = (date, dateString) => {
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
                 Cash/Zelle/Card/Venmo
                 </div>
-                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                <div style={{background: "rgba(25, 62, 61, 0.9)", cursor: "pointer", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}
+                onClick={showModal}>
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
@@ -857,7 +790,8 @@ const onChange = (date, dateString) => {
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
                 Cash/Zelle/Card/Venmo
                 </div>
-                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                <div style={{background: "rgba(25, 62, 61, 0.9)", cursor: "pointer", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}
+                onClick={showModal}>
                   Get a free Quote
                 </div>
                 <div style={{fontSize: "14px", fontWeight: "500", margin: "12px 0px", fontWeight: "600"}}>Booking policy: 3 hours minimum</div>
@@ -931,7 +865,8 @@ const onChange = (date, dateString) => {
                 <div style={{fontSize: "14px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center", lineHeight: "20px"}}>
                   Call or Email our representatives to discuss details about your move and Get your <span style={{color: "red"}}>FREE Flat Fee Offer</span>
                 </div>
-                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}>
+                <div style={{background: "rgba(25, 62, 61, 0.9)", color: "#fff", cursor: "pointer", padding: "10px 20px", textAlign:"center", borderRadius: "10px", fontWeight: "600", fontSize: "18px", marginTop: "20px"}}
+                onClick={showModal}>
                   Get a free Quote
                 </div>   
               </div>
@@ -939,6 +874,7 @@ const onChange = (date, dateString) => {
             </div>
           </div>
         </div>
+     
         <div   className={css.whyMagicCss}> 
           <div className={css.ourservicesCss} > 
             <div className={css.whyMagicTitle}>
@@ -1092,6 +1028,9 @@ const onChange = (date, dateString) => {
               </div>
         </div>
         <div style={{width: "100%", background: "#fff", textAlign: "center", fontSize: "14px", padding: "10px 0px"}}>©2025 by Magic Movers LLC.</div>
+        <Modal title="Get a free Quote" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null}>
+            <FormCont />
+        </Modal>
       </div>
     </div>
   );

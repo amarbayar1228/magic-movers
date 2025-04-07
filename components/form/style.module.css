@@ -1,0 +1,477 @@
+ 
+  
+.stickyHeader {
+  background-color: rgba(25, 62, 61, 0.9); /* Slightly transparent */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+  .flex{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 1536px;
+    color: #fff;
+    margin: 0px auto;
+  }
+  .hero {
+    position: sticky;
+    top: 0;
+    background-color: rgb(25 62 61);
+    z-index: 10;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .ourServices{ 
+    padding: 20px;
+  }
+  .contact{
+    height: 250px;
+    padding: 50px 20px;
+  }
+   .aboutUs, .reviews { 
+    padding: 20px;
+  }
+
+  .services { 
+    height: 720px; 
+    padding: 20px -1px 20px 20px;
+    width: 100%;
+    background-image: url('/img/back2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .qacss{
+    width: 1150px;
+    margin: 50px auto;
+  }
+  
+  .services { background-color: rgba(25, 62, 61, 0.9); } 
+  .ourServices { background-color: #fff; }
+  .aboutUs { background-color: rgb(25 62 61 / 2%) }
+  .reviews { background-color: lightyellow; }
+  .contact { background-color: #093d3e }
+  
+  .link {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+  }
+  .mainCss{ 
+    display: flex;
+    width: 1436px;
+    height: 100%;
+    margin: 0px auto; 
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mainCont{ 
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+  }
+  .phone{
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+  }
+  .Icons{
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    align-items: center;
+  }
+  .Imagecss{
+    width: 100px;
+    height: 100px;
+  }
+  .mainTitleBig{
+    
+    font-weight: 600;
+    font-size: 46px;
+
+  }
+  .mainLay1{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  .mainTitleSmall{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .form{
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+  }
+  .getTitle{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .getTitleSmall{ 
+    padding-top: 5px;
+    display: flex
+;
+    font-size: 16px;
+    gap: 4px;
+    font-weight: 600;
+    align-items: center;
+  }
+  .groupRadio{
+    padding: 10px 0px;
+  }
+  .radioTitle{
+    font-size: 16px;
+  }
+  .pickLo{ 
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+    font-weight: 600; 
+    gap: 10px;
+  }
+  .ourservicesCss{ 
+    margin: 20px auto;
+    width: 1150px; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0px;
+  }
+  .ourserviceTitle{
+    text-align: center;
+    font-weight: 500;
+    font-size: 56px;  
+    position: relative;
+    display: inline-block;
+  }
+  .ourserviceTitle:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px; /* Custom width */
+    height: 5px; /* Custom height */
+    background-color: black; /* Border color */
+    transform: translateX(-50%);
+  }
+  .submitCss{
+    width: 200px;
+    padding: 15px 40px;
+    border-radius: 15px;
+    display: flex;
+    background: rgba(25, 62, 61, 0.9);
+    margin: 0px auto;
+    justify-content: center; 
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+  }
+  .submitCss:hover{ 
+    background: rgba(56, 163, 139, 1);
+  }
+  .servicesbox{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  .boxs{
+    margin-top: 40px;  
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 4px 1px #ccc;
+  } 
+  .BookNow{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+    background: rgba(25, 62, 61, 0.9);
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid rgba(25, 62, 61, 0.9);
+    color: #fff;
+  }
+  .BookNow:hover{
+    border: 1px solid #000;
+    background-color: rgba(56, 163, 139, 1);
+  }
+  .imageFlex{ 
+    cursor: pointer;
+  }
+  .contact2{
+    display: flex;
+    padding: 0px 200px;
+    justify-content: space-between;
+  }
+  .FooterLogo{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color:#fff;
+  }
+  .imgFooter{
+    width: 350px;
+    height: 20px; 
+  }
+  .footerLayout2{ 
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    color: #fff;
+  }
+  .whyMagicCss{
+    background-color: rgb(25 62 61 / 85%);
+    color: #fff;
+    padding: 50px 10px;
+  }
+  .aboutUsDetail{
+    display: flex;
+    margin: 0px auto;
+    width: 1150px;
+    gap: 40px;
+    padding: 50px 0px;
+  }
+  .aboutdetail{
+    display: flex; 
+    flex-direction: column;
+    margin-left: 60px;
+  }
+  .AboutTitle{
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 11px;
+  } 
+ 
+  .AboutDesc{
+    font-size: 18px;
+    color: rgb(55, 65, 81);
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .ZuragContainer {
+    flex: 1; /* Зураг тал нь мөн адил жигд байх */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+  .imgFlex{
+    display: flex;
+    gap: 40px;
+  }
+
+.whyMagicTitle{
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.mapsLayout{
+  display: flex;
+  gap: 100px;
+  color: rgba(25, 62, 61, 0.9);
+    font-weight: 600;
+}
+.mapsTitles{
+  display: flex;
+  gap: 30px;
+}
+/* ------------------ 1536px  -------------------------------==========================================================*/
+  @media only screen and (max-width: 1536px) { 
+    .qacss{
+      width: 80%;
+    }
+    .aboutUsDetail{
+      width: 900px;  
+    } 
+    .flex{
+      width: 90%;
+    }
+    .mainCss{  
+      width: 70%; 
+    }
+    .ourservicesCss{
+      width: 1000px;
+      margin: 0px auto;
+    } 
+    .ourServices{
+      height: 100%;
+    }
+    .contact2{ 
+      padding: 0px 10px;
+    }
+  }
+ @media only screen and (max-width: 1080px) { 
+  .mapsLayout{ 
+    flex-direction: column;
+    gap: 50px;
+    
+  }
+  .mapsTitles{
+    gap: 0px;
+  }
+ }
+  @media only screen and (max-width: 768px) {
+    .contact{
+      height: 100%;
+    }
+    .ourservicesCss{
+      width: 100%;
+    }  
+    .aboutUsDetail{
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+    .AboutTitle{
+      font-size: 30px;
+    }
+    .aboutdetail{
+      margin-left: 0px;
+      padding: 0px 20px;
+    }
+    .servicesbox{
+      flex-direction: column;   
+    }
+    .qacss{
+      width: 100%;
+    } 
+    .contact2{
+      gap: 40px;
+      flex-direction: column;
+      padding: 0px 10px;
+    }
+    .ourserviceTitle{
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .ourserviceTitle:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 60px; /* Custom width */
+      height: 2px; /* Custom height */
+      background-color: black; /* Border color */
+      transform: translateX(-50%);
+    }
+    .ourservicesCss{
+      margin: inherit;
+      width: 100%;
+    }
+    .submitCss{
+      width: 155px;
+    }
+    .mainLay1{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .mainCont{
+      flex-direction: column;
+    }
+    .mainTitleBig{
+      font-size: 25px;
+    }
+    .radioGroupCss{
+      display: flex;
+    flex-wrap: wrap;
+    }
+    .getTitle {
+      font-size: 19px;
+    }
+    .form{
+      padding: 20px;
+    }
+    .mainCss{
+      width: 85%;
+    }
+    .pickLo{
+      flex-direction: column;
+    }
+    .services{
+      height: 1200px;
+    }
+    .phone{
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 5px;
+      cursor: pointer;
+      align-items: normal;
+    }
+    .Imagecss{
+      width: 50px;
+      height: 50px;
+    }
+  }
+  @media only screen and (max-width: 500px) { 
+    .whyMagicTitle{
+      font-size: 30px;
+    }
+    .contact{ 
+      height: 100%; 
+    }
+    .imgFlex{
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imageFlex{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .flex{
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+      padding-bottom: 15px;
+    } 
+    .Imagecss{
+      width: 30px;
+      height: 30px;
+    }
+    .hero{
+      position: relative;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    
+  }
+  /* scroll to top button */
+  /* .top-btn-position {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+  }
+  
+  .top-btn-style {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .top-btn-style:hover {
+    animation: none;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+   */
