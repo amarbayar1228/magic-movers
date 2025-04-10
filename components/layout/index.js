@@ -706,10 +706,10 @@ const onChange = (date, dateString) => {
               <div className={css.boxs}>
                 <div style={{display: "flex", justifyContent: "center"}}>
                   <Image src="/img/muv3.avif" alt="Company Logo" width={120} height={48} className={css.muv3} />
-                </div>
+                </div> 
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>3 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(LARGE 1 BDR, 2 BDR OR MEDIUM OFFICE)</div>
-                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$129
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$149
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div>
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
@@ -784,7 +784,7 @@ const onChange = (date, dateString) => {
                 </div>
                 <div style={{fontSize: "18px", fontWeight: 600, marginTop: "10px", textAlign: "center"}}>4 MOVERS AND A TRUCK</div>
                 <div style={{fontSize: "12px", marginTop: "5px", textAlign: "center"}}>(LARGE 2 BDR, 3 BDR OR LARGE OFFICE)</div>
-                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$169
+                <div style={{fontSize: "25px", color: "red", fontWeight: "600", margin: "12px 0px", textAlign: "center"}}>$199
                   <span style={{color: "#808080", fontSize: "18px", fontWeight: "500"}}>/hr</span>
                 </div>
                 <div style={{fontSize: "18px", color: "#808080", fontWeight: "600", marginTop: "5px", textAlign: "center"}}>
